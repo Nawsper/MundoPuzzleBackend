@@ -1,0 +1,178 @@
+[
+    {
+        "id": 1,
+        "title": "Ciervo en Primavera",
+        "description": "Ravensburger 1000 Piezas",
+        "code": "r1",
+        "price": 10000,
+        "stock": 100,
+        "status": true,
+        "category": "Ravensburger",
+        "thumbnails": "../images/ravensburger/ravensburger-ciervo-1000.webp"
+    },
+    {
+        "id": 2,
+        "title": "Jardín Japonés",
+        "description": "Ravensburger 1000 Piezas",
+        "code": "r2",
+        "price": 10000,
+        "stock": 75,
+        "status": true,
+        "category": "Ravensburger",
+        "thumbnails": "../images/ravensburger/ravensburger-jardin-japones-1000.webp"
+    },
+    {
+        "id": 3,
+        "title": "Alrededor del Mundo",
+        "description": "Ravensburger 2000 Piezas",
+        "code": "r3",
+        "price": 15000,
+        "stock": 126,
+        "status": true,
+        "category": "Ravensburger",
+        "thumbnails": "../images/ravensburger/ravensburger-planisferio-2000.webp"
+    },
+    {
+        "id": 4,
+        "title": "Edificio Flatiron",
+        "description": "Ravensburger 3000 Piezas",
+        "code": "r4",
+        "price": 20000,
+        "stock": 32,
+        "status": true,
+        "category": "Ravensburger",
+        "thumbnails": "../images/ravensburger/ravensburger-edificio-3000.webp"
+    },
+    {
+        "id": 5,
+        "title": "Amanecer en el Rio Katsura, Japón",
+        "description": "Educa 1000 Piezas",
+        "code": "e1",
+        "price": 8000,
+        "stock": 63,
+        "status": true,
+        "category": "Educa",
+        "thumbnails": "../images/educa/educa-katsura-japon-1000.webp"
+    },
+    {
+        "id": 6,
+        "title": "Maravillas del Mundo",
+        "description": "Educa 1000 Piezas",
+        "code": "e2",
+        "price": 8000,
+        "stock": 141,
+        "status": true,
+        "category": "Educa",
+        "thumbnails": "../images/educa/educa-mundo-1000.webp"
+    },
+    {
+        "id": 7,
+        "title": "Londres al Atardecer",
+        "description": "Educa 2000 Piezas",
+        "code": "e3",
+        "price": 12000,
+        "stock": 11,
+        "status": true,
+        "category": "Educa",
+        "thumbnails": "../images/educa/educa-londres-atardecer-2000.webp"
+    },
+    {
+        "id": 8,
+        "title": "Jardín Japones",
+        "description": "Educa 3000 Piezas",
+        "code": "e4",
+        "price": 16000,
+        "stock": 98,
+        "status": true,
+        "category": "Educa",
+        "thumbnails": "../images/educa/educa-jardin-japones-3000.webp"
+    },
+    {
+        "id": 9,
+        "title": "Campo de Lavandas",
+        "description": "Clementoni 1000 Piezas",
+        "code": "c1",
+        "price": 7000,
+        "stock": 113,
+        "status": true,
+        "category": "Clementoni",
+        "thumbnails": "../images/clementoni/clementoni-campo-lavandas-1000.webp"
+    },
+    {
+        "id": 10,
+        "title": "Colorboom Canicas",
+        "description": "Clementoni 1000 Piezas",
+        "code": "c2",
+        "price": 7000,
+        "stock": 77,
+        "status": true,
+        "category": "Clementoni",
+        "thumbnails": "../images/clementoni/clementoni-colorboom-1000.webp"
+    },
+    {
+        "id": 11,
+        "title": "Molino en Glade Creek",
+        "description": "Clementoni 2000 Piezas",
+        "code": "c3",
+        "price": 10000,
+        "stock": 146,
+        "status": true,
+        "category": "Clementoni",
+        "thumbnails": "../images/clementoni/clementoni-molino-2000.webp"
+    },
+    {
+        "id": 12,
+        "title": "Amanecer en el Coliseo",
+        "description": "Clementoni 3000 Piezas",
+        "code": "c4",
+        "price": 13000,
+        "stock": 56,
+        "status": true,
+        "category": "Clementoni",
+        "thumbnails": "../images/clementoni/clementoni-amancer-coliseo-3000-.webp"
+    },
+    {
+        "id": 13,
+        "title": "Sweet Cat",
+        "description": "Wooden 1000 Piezas",
+        "code": "w1",
+        "price": 15000,
+        "stock": 117,
+        "status": true,
+        "category": "Wooden",
+        "thumbnails": "../images/madera/puzzle-madera-1000-gato.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Fiery fox",
+        "description": "Wooden 1000 Piezas",
+        "code": "w2",
+        "price": 15000,
+        "stock": 13,
+        "status": true,
+        "category": "Wooden",
+        "thumbnails": "../images/madera/puzzle-madera-1000-zorro.webp"
+    },
+    {
+        "id": 15,
+        "title": "Guarding Dragon",
+        "description": "Wooden 2000 Piezas",
+        "code": "w3",
+        "price": 20000,
+        "stock": 28,
+        "status": true,
+        "category": "Wooden",
+        "thumbnails": "../images/madera/puzzle-madera-2000-dragon.webp"
+    },
+    {
+        "id": 16,
+        "title": "Fairy Bird",
+        "description": "Wooden 3000 Piezas",
+        "code": "w4",
+        "price": 25000,
+        "stock": 17,
+        "status": true,
+        "category": "Wooden",
+        "thumbnails": "../images/madera/puzzle-madera-3000-pajaro.webp"
+    }
+]

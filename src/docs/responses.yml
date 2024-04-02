@@ -1,0 +1,216 @@
+components:
+  schemas:
+    Products:
+      Product:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: Id del producto
+          title:
+            type: string
+            description: Nombre del producto
+          description:
+            type: string
+            description: Descripción del producto
+          code:
+            type: string
+            description: Código del producto
+          price:
+            type: number
+            description: Precio del producto
+          stock:
+            type: number
+            description: Inventario del producto
+          status:
+            type: boolean
+            description: Estado de activación del producto
+          category:
+            type: string
+            description: Clasificación del producto
+          thumbnails:
+            type: array
+            description: Imagenes del producto
+        example:
+          _id: 655ff0425a3931be1c79b0dc
+          title: Ciervo en Primavera
+          description: Ravensburger 1000 Piezas
+          code: r1
+          price: 10000
+          stock: 100
+          status: true
+          category: Ravensburger
+          thumbnails: [../images/ravensburger/ravensburger-ciervo-1000.webp]
+      getProducts:
+        type: object
+        properties:
+          status:
+            type: string
+            description: mensaje status
+          data:
+            type: array
+            description: lista de productos
+            items:
+            $ref: "#/components/schemas/Products/Product"
+        example:
+          status: success
+          data:
+            [
+              {
+                _id: "655ff0425a3931be1c79b0dc",
+                title: "Ciervo en Primavera",
+                description: "Ravensburger 1000 Piezas",
+                code: "r1",
+                price: 10000,
+                stock: 100,
+                status: true,
+                category: "Ravensburger",
+                thumbnails:
+                  ["../images/ravensburger/ravensburger-ciervo-1000.webp"],
+              },
+              {
+                _id: "655ff0425a3931be1c79b0dd",
+                title: "Jardín Japonés",
+                description: "Ravensburger 1000 Piezas",
+                code: "r2",
+                price: 10000,
+                stock: 75,
+                status: true,
+                category: "Ravensburger",
+                thumbnails:
+                  [
+                    "../images/ravensburger/ravensburger-jardin-japones-1000.webp",
+                  ],
+              },
+            ]
+      getById:
+        type: object
+        properties:
+          status:
+            type: number
+            description: HTTP status code
+          message:
+            type: string
+            description: Success
+          data:
+            type: object
+            description: informacion producto
+            $ref: "#/components/schemas/Products/Product"
+        example:
+          status: 200
+          message: success
+          data:
+            {
+              _id: "655ff0425a3931be1c79b0dc",
+              title: "Ciervo en Primavera",
+              description: "Ravensburger 1000 Piezas",
+              code: "r1",
+              price: 10000,
+              stock: 100,
+              status: true,
+              category: "Ravensburger",
+              thumbnails:
+                ["../images/ravensburger/ravensburger-ciervo-1000.webp"],
+            }
+      getByIdDTO:
+        type: object
+        properties:
+          status:
+            type: number
+            description: HTTP status code
+          message:
+            type: string
+            description: Success
+          data:
+            type: object
+            description: informacion producto
+            $ref: "#/components/schemas/Products/Product"
+            # properties:
+            #   nombre:
+            #     type: string
+            #     description: Nombre del producto
+            #   descripcion:
+            #     type: string
+            #     description: Descripción del producto
+            #   codigo:
+            #     type: string
+            #     description: Código del producto
+            #   precio:
+            #     type: number
+            #     description: Precio del producto
+            #   disponibilidad:
+            #     type: number
+            #     description: Inventario del producto
+        example:
+          status: 200
+          message: success
+          data:
+            {
+              nombre: "Jardín Japonés",
+              descripcion: "Ravensburger 1000 Piezas",
+              codigo: "r2",
+              precio: 10000,
+              disponibilidad: 75,
+            }
+    Carts:
+      Cart:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: "ID del carrito."
+          products:
+            type: array
+            properties:
+              product:
+                type: string
+                description: "ID del producto."
+              quantity:
+                type: number
+                description: "Cantidad del producto en el carrito."
+        example:
+          _id: 6566773534523645eb103f84
+          products:
+            [
+              {
+                product: 655ff0425a3931be1c79b0df,
+                quantity: 3,
+                _id: 6566774834523645eb103f88,
+              },
+            ]
+      getCarts:
+        type: object
+        properties:
+          status:
+            type: number
+            description: HTTP status code
+          message:
+            type: string
+            description: Success
+          data:
+            type: array
+            description: lista de carritos
+            $ref: "#/components/schemas/Carts/Cart"
+            # properties:
+            #   type: object
+            #   properties:
+            #     _id:
+            #       type: string
+            #       description: "ID del carrito."
+            #     products:
+            #       type: array
+            #       properties:
+            #         product:
+            #           type: string
+            #           description: "ID del producto."
+            #         quantity:
+            #           type: number
+            #           description: "Cantidad del producto en el carrito."
+        example:
+          status: 200
+          message: success
+          data:
+            {
+              _id: 6566773534523645eb103f84,
+              products: [{ product: 655ff0425a3931be1c79b0df, quantity: 3 }],
+            }

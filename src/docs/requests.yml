@@ -1,0 +1,69 @@
+components:
+  parameters:
+    schemas:
+      BodyProduct:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: Id del producto
+          title:
+            type: string
+            required: true
+            index: true
+          description:
+            type: string
+            required: false
+          code:
+            type: string
+            required: true
+            unique: true
+          price:
+            type: number
+            required: true
+          stock:
+            type: number
+            required: true
+          status:
+            type: boolean
+            required: true
+            default: true
+          category:
+            type: string
+            required: true
+            index: true
+          thumbnails:
+            type: array
+            default: []
+        example:
+          title: Ciervo en Primavera
+          description: Ravensburger 1000 Piezas
+          code: r1
+          price: 10000
+          stock: 100
+          status: true
+          category: Ravensburger
+          thumbnails: [../images/ravensburger/ravensburger-ciervo-1000.webp]
+      BodyCart:
+        type: object
+        properties:
+          products:
+            type: array
+            items:
+              type: object
+              properties:
+                _id:
+                  type: string
+                  description: "ID del producto."
+                quantity:
+                  type: number
+                  description: "Cantidad del producto en el carrito."
+        example:
+          products:
+            - _id: "61234567890abcdef1234567"
+              quantity: 2
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

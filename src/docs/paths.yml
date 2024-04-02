@@ -1,0 +1,69 @@
+paths:
+  /api/products:
+    get:
+      tags:
+        - Products
+      summary: Listado de todos los productos
+      description: Se visualiza listado de productos
+      responses:
+        200:
+          description: Se obtinene lista de productos
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Products/getProducts"
+  /api/products/no-dto/{id}:
+    get:
+      tags:
+        - Products
+      summary: Producto seleccionado
+      description: Se visualiza el producto seleccionado
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id referente al producto
+          schema:
+            type: string
+      responses:
+        200:
+          description: Producto seleccionado
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Products/getById"
+  /api/products/dto/{id}:
+    get:
+      tags:
+        - Products
+      summary: Producto seleccionado DTO
+      description: Se visualiza el producto seleccionado con informacion abreviada
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id referente al producto
+          schema:
+            type: string
+      responses:
+        200:
+          description: Producto seleccionado
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Products/getByIdDTO"
+  /api/carts:
+    get:
+      tags:
+        - Carts
+      security:
+        - BearerAuth: []
+      summary: Listado de todos los carritos
+      description: Se visualiza listado de carritos
+      responses:
+        200:
+          description: Se obtinene lista de carritos
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Carts/getCarts"

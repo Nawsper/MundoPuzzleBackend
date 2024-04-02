@@ -1,0 +1,17 @@
+<ul>
+  {{#each products}}
+    <h3>Producto</h3>
+    <li> {{id}} </li>
+    <li> {{title}} </li>
+    <li> {{description}} </li>
+    <li> {{code}} </li>
+    <li> {{price}} </li>
+    <li> {{stock}} </li>
+    <li> {{status}} </li>
+    <li> {{category}} </li>
+    <li> {{thumbnails}} </li>
+  {{/each}}
+</ul>
+
+<script src="/socket.io/socket.io.js" charset="utf-8"></script>
+<script src="/src/public/js/index.js" charset="utf-8"></script>
