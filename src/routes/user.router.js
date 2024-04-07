@@ -28,6 +28,8 @@ router.get("/profile-github", passport.authenticate("github", {
 }));
 
 //jwt - dto
+router.get('/current/dto/allUsers', passport.authenticate('current'), controller.getDTO);
+
 router.get('/current/dto/:id', passport.authenticate('current'), controller.getByIdDTO);
 
 //delete users

@@ -9,6 +9,27 @@ export default class UserRepository {
         this.dao = userDao;
     }
 
+    async getDTO() {
+        try {
+            const response = await this.dao.getAll();
+            let users = [];
+            console.log(response);
+            for (let index = 0; index < response.length; index++) {
+                const { nombre, apellido, email, role } = new UserResDTO(response[index])
+                const user = {
+                    nombre,
+                    apellido,
+                    email,
+                    role
+                }
+                users.push(user);
+            }
+            return users
+        } catch (error) {
+            throw new Error(error.message);
+        }
+    }
+
     async getByIdDTO(id) {
         try {
             const response = await this.dao.getById(id);

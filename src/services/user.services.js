@@ -35,6 +35,15 @@ export default class UserService extends Services {
     }
   }
 
+  async getDTO() {
+    try {
+      const user = await userRepository.getDTO();
+      return user ? user : false;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
+
   async getByIdDTO(id) {
     try {
       const user = await userRepository.getByIdDTO(id);

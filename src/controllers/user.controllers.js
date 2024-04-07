@@ -37,6 +37,17 @@ export default class UserControllers extends Controllers {
         }
     }
 
+    async getDTO(req, res, next) {
+        try {
+            const user = await userService.getDTO();
+            if (!user) return httpResponse.NotFound(res, errorsDictionary.ITEM_NOT_FOUND);
+            else return httpResponse.Ok(res, user);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+
     async getByIdDTO(req, res, next) {
         try {
             const { id } = req.params;
